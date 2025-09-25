@@ -1,0 +1,91 @@
+  //Program1//
+#Program MAIN;
+
+Start
+  Variable Integer32_t A9A, B9B, C9C, D9D;
+
+  Get(A9A);
+  Get(B9B);
+
+  Put(A9A + B9B);
+  Put(A9A - B9B);
+  Put(A9A * B9B);
+  Put(A9A Div B9B);
+  Put(A9A Mod B9B);
+
+  (A9A - B9B) * 10 + (A9A + B9B) Div 10 -> C9C;
+  C9C + C9C Mod 10 -> D9D;
+
+  Put(C9C);
+  Put(D9D);
+
+Stop
+
+//Program2//
+#Program MAIN;
+
+Start
+  Variable Integer32_t A9A, B9B, C9C, D9D;
+
+  Get(A9A);
+  Get(B9B);
+  Get(C9C);
+
+  If A9A >= B9B And A9A >= C9C {
+      A9A -> D9D;
+  } Else If B9B >= A9A And B9B >= C9C {
+      B9B -> D9D;
+  } Else {
+      C9C -> D9D;
+  }
+  Put(D9D);
+
+  If (A9A == B9B) And (A9A == C9C) And (B9B == C9C) {
+      Put(1);
+  } Else {
+      Put(0);
+  }
+
+  If Not (A9A >= 0) Or Not (B9B >= 0) Or Not (C9C >= 0) {
+      Put(-1);
+  } Else {
+      Put(0);
+  }
+
+  If A9A >= (B9B + C9C) {
+      Put(10);
+  } Else {
+      Put(0);
+  }
+
+Stop
+
+//Program3//
+#Program CYCLECALC;
+
+Start
+  Variable Integer32_t A9A, B9B, C9C, D9D, E9E;
+
+  Get(A9A);
+  Get(B9B);
+
+  C9C -> A9A;
+  Repeat
+    Put(C9C * C9C);
+    C9C + 1 -> C9C;
+  Until C9C > B9B;
+
+  0 -> E9E;
+  1 -> C9C;
+  Repeat
+    1 -> D9D;
+    Repeat
+      E9E + 1 -> E9E;
+      D9D + 1 -> D9D;
+    Until D9D > B9B;
+    C9C + 1 -> C9C;
+  Until C9C > A9A;
+
+  Put(E9E);
+
+Stop
