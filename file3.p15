@@ -1,7 +1,7 @@
 NAME CYCLECALC;
 
 BODY
-  DATA INTEGER32 _A9A, _B9B, _C9C, _D9D, _E9E;
+  DATA Integer32_t _A9A, _B9B, _C9C, _D9D, _E9E;
 
   GET ( _A9A )
   GET ( _B9B )
