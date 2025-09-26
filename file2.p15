@@ -7,28 +7,28 @@ Start
   Get(B9B);
   Get(C9C);
 
-  If A9A >= B9B And A9A >= C9C {
+  If A9A !< B9B And A9A !< C9C {
       A9A -> D9D;
-  } Else If B9B >= A9A And B9B >= C9C {
+  } Else If B9B !< A9A And B9B !< C9C {
       B9B -> D9D;
   } Else {
       C9C -> D9D;
   }
   Put(D9D);
 
-  If (A9A == B9B) And (A9A == C9C) And (B9B == C9C) {
+  If (A9A = B9B) And (A9A = C9C) And (B9B = C9C) {
       Put(1);
   } Else {
       Put(0);
   }
 
-  If Not (A9A >= 0) Or Not (B9B >= 0) Or Not (C9C >= 0) {
+  If Not (A9A !< 0) Or Not (B9B !< 0) Or Not (C9C !< 0) {
       Put(-1);
   } Else {
       Put(0);
   }
 
-  If A9A >= (B9B + C9C) {
+  If A9A !< (B9B + C9C) {
       Put(10);
   } Else {
       Put(0);
