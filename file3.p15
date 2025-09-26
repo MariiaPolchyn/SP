@@ -7,7 +7,7 @@ BODY
   GET ( _B9B )
 
   _A9A -> _C9C
-  IF _C9C <= _B9B {
+  IF _C9C !> _B9B {
     REPEAT
       PUT ( _C9C * _C9C )
       _C9C + 1 -> _C9C
@@ -16,10 +16,10 @@ BODY
 
   0 -> _E9E
   1 -> _C9C
-  IF _C9C <= _A9A {
+  IF _C9C !> _A9A {
     REPEAT
       1 -> _D9D
-      IF _D9D <= _B9B {
+      IF _D9D !> _B9B {
         REPEAT
           _E9E + 1 -> _E9E
           _D9D + 1 -> _D9D
