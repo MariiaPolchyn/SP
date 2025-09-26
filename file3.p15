@@ -1,35 +1,35 @@
 NAME P0G;
+Start
+  Variable Integer32_t _A0А, _B0B, _C0C, _D0D, _E0E;
 
-START
-  VARIABLE Integer32_t _A9A, _B9B, _C9C, _D9D, _E9E;
+  Get ( _A0A )
+  Get ( _B0B )
 
-  GET ( _A9A )
-  GET ( _B9B )
-
-  _A9A -> _C9C
-  IF _C9C !> _B9B {
-    REPEAT
-      PUT ( _C9C * _C9C )
-      _C9C + 1 -> _C9C
-    UNTIL _C9C !> _B9B
+  _A0A -> _C0C
+  If _C0C !> _B0B {
+    Repeat
+      Put ( _C0C * _C0C )
+      _C0C + 1 -> _C0C
+    Until _C0C !> _B0B
   }
 
-  0 -> _E9E
-  1 -> _C9C
-  IF _C9C !> _A9A {
-    REPEAT
-      1 -> _D9D
-      IF _D9D !> _B9B {
-        REPEAT
-          _E9E + 1 -> _E9E
-          _D9D + 1 -> _D9D
-        UNTIL _D9D !> _B9B
+  0 -> _E0E
+  1 -> _C0C
+  If _C0C !> _A0A {
+    Repeat
+      1 -> _D0D
+      If _D0D !> _B0B {
+        Repeat
+          _E0E + 1 -> _E0E
+          _D0D + 1 -> _D0D
+        Until _D0D !> _B0B
       }
-      _C9C + 1 -> _C9C
-    UNTIL _C9C !> _A9A
+      _C0C + 1 -> _C0C
+    Until _C0C !> _A0A
   }
 
-  PUT ( _E9E )
+  Put ( _E0E )
 
-END
+End
+
 
