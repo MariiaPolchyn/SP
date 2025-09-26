@@ -26,7 +26,7 @@ BODY
         UNTIL _D9D !> _B9B
       }
       _C9C + 1 -> _C9C
-    UNTIL _C9C > _A9A
+    UNTIL _C9C !> _A9A
   }
 
   PUT ( _E9E )
