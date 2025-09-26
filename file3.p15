@@ -1,4 +1,4 @@
-NAME CYCLECALC;
+NAME P0G;
 
 BODY
   DATA Integer32_t _A9A, _B9B, _C9C, _D9D, _E9E;
