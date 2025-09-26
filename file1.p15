@@ -1,0 +1,21 @@
+#Program CALCULATION;
+
+Start
+  Variable Integer32_t A9A, B9B, C9C, D9D;
+
+  Get(A9A);
+  Get(B9B);
+
+  Put(A9A + B9B);
+  Put(A9A - B9B);
+  Put(A9A * B9B);
+  Put(A9A Div B9B);
+  Put(A9A Mod B9B);
+
+  (A9A - B9B) * 10 + (A9A + B9B) Div 10 -> C9C;
+  C9C + C9C Mod 10 -> D9D;
+
+  Put(C9C);
+  Put(D9D);
+
+Stop
