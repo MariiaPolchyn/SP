@@ -1,28 +1,35 @@
-#Program CYCLECALC;
+NAME CYCLECALC;
 
-Start
-  Variable Integer32_t A9A, B9B, C9C, D9D, E9E;
+BODY
+  DATA INTEGER32 _A9A, _B9B, _C9C, _D9D, _E9E;
 
-  Get(A9A);
-  Get(B9B);
+  GET ( _A9A )
+  GET ( _B9B )
 
-  C9C -> A9A;
-  Repeat
-    Put(C9C * C9C);
-    C9C + 1 -> C9C;
-  Until C9C > B9B;
+  _A9A -> _C9C
+  IF _C9C <= _B9B {
+    REPEAT
+      PUT ( _C9C * _C9C )
+      _C9C + 1 -> _C9C
+    UNTIL _C9C > _B9B
+  }
 
-  0 -> E9E;
-  1 -> C9C;
-  Repeat
-    1 -> D9D;
-    Repeat
-      E9E + 1 -> E9E;
-      D9D + 1 -> D9D;
-    Until D9D > B9B;
-    C9C + 1 -> C9C;
-  Until C9C > A9A;
+  0 -> _E9E
+  1 -> _C9C
+  IF _C9C <= _A9A {
+    REPEAT
+      1 -> _D9D
+      IF _D9D <= _B9B {
+        REPEAT
+          _E9E + 1 -> _E9E
+          _D9D + 1 -> _D9D
+        UNTIL _D9D > _B9B
+      }
+      _C9C + 1 -> _C9C
+    UNTIL _C9C > _A9A
+  }
 
-  Put(E9E);
+  PUT ( _E9E )
 
-Stop
+END
+
