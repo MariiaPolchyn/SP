@@ -1,4 +1,4 @@
-#Program P0G;
+#Program P1G;
 
 Start
   Variable Integer32_t A9A, B9B, C9C, D9D;
@@ -22,7 +22,7 @@ Start
       Put(0);
   }
 
-  If Not (A9A !< 0) Or Not (B9B !< 0) Or Not (C9C !< 0) {
+  If ! (A9A !< 0) Or ! (B9B !< 0) Or ! (C9C !< 0) {
       Put(-1);
   } Else {
       Put(0);
