@@ -1,4 +1,4 @@
-#Program CALCULATION;
+#Program P0G;
 
 Start
   Variable Integer32_t A9A, B9B, C9C, D9D;
@@ -8,7 +8,7 @@ Start
 
   Put(A9A + B9B);
   Put(A9A - B9B);
-  Put(A9A * B9B);
+  Put(A9A Mul B9B);
   Put(A9A Div B9B);
   Put(A9A Mod B9B);
 
