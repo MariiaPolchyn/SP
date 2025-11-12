@@ -1,35 +1,37 @@
 #Program P3G;
-Start
-  Variable Integer32_t A9A, B9B, C9C, D9D, E9E;
+Start Variable Integer32_t A9A, B9B, C9C, D9D, E9E;
 
-  Get ( A9A )
-  Get ( B9B )
+  Get ( A9A );
+  Get ( B9B );
 
-  A9A -> C9C
+  A9A -> C9C;
+
   If C9C !> B9B {
     Repeat
-      Put ( C9C * C9C )
-      C9C + 1 -> C9C
-    Until C9C !> B9B
-  }
+      Put ( C9C Mul C9C );
+      C9C + 1 -> C9C;
+    Until C9C !> B9B;
+  };
 
-  0 -> E9E
-  1 -> C9C
+  0 -> E9E;
+  1 -> C9C;
+
   If C9C !> A9A {
     Repeat
-      1 -> D9D
+      1 -> D9D;
+
       If D9D !> B9B {
         Repeat
-          E9E + 1 -> E9E
-          D9D + 1 -> D9D
-        Until D9D !> B9B
-      }
-      C9C + 1 -> C9C
-    Until C9C !> A9A
-  }
+          E9E + 1 -> E9E;
+          D9D + 1 -> D9D;
+        Until D9D !> B9B;
+      };
 
-  Put ( E9E )
+      C9C + 1 -> C9C;
+    Until C9C !> A9A;
+  };
+
+  Put ( E9E );
 
 Stop
-
 
