@@ -1,7 +1,5 @@
 #Program P1G;
-
-Start
-  Variable Integer32_t A9A, B9B, C9C, D9D;
+ Start Variable Integer32_t A9A, B9B, C9C, D9D;
 
   Get(A9A);
   Get(B9B);
